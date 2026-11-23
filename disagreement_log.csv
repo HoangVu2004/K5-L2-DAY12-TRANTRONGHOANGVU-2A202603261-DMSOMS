@@ -1,0 +1,75 @@
+image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,hand,on_wheel,khác giá trị (IoU=0.86),no,unknown,mine,4.7,Giữ nguyên (xe tự lái thử nghiệm tay không trên vô lăng là bình thường)
+D01.png,person,seatbelt,khác giá trị (IoU=0.96),unknown,not_worn,mine,4.4-1,Giữ nguyên (dây an toàn bị che khuất không rõ ràng thì để unknown)
+D02.png,person,seatbelt,khác giá trị (IoU=0.70),unknown,worn_correct,mine,4.7,Giữ nguyên (chìm trong bóng tối/khuất nên chọn unknown không đoán)
+D02.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.2,Peer đúng (DMS không vẽ nhãn object)
+D02.png,face,eye_left,khác giá trị (IoU=0.84),unknown,open,mine,4.5,Giữ nguyên (mắt dưới bóng râm tròng kính tối không rõ khe mí để unknown)
+D02.png,face,eye_right,khác giá trị (IoU=0.84),unknown,open,mine,4.5,Giữ nguyên (không phân biệt rõ mí khép hay mở thì để unknown)
+D02.png,face,gaze_zone,khác giá trị (IoU=0.84),other,center,ambiguous,4.5,Góc nhìn nghiêng khó xác định giữa center và other
+D02.png,face,glasses,khác giá trị (IoU=0.84),sun,clear,ambiguous,4.5,Ảnh NIR kính râm có thể trong suốt khó phân biệt sun hay clear
+D03.png,face,eye_right,khác giá trị (IoU=0.92),open,unknown,peer,4.4-1,Peer đúng (có đốm phản xạ che mắt phải nên để unknown)
+D03.png,face,gaze_zone,khác giá trị (IoU=0.92),other,center,mine,4.5,Giữ nguyên (tài xế nhìn chếch không thẳng center)
+D03.png,face13,right_eye_outer.outside,khác cờ,0,1,both_wrong,4.6,Bị phản xạ che nên dùng cờ occluded thay vì outside
+D03.png,face13,right_eye_inner.outside,khác cờ,0,1,both_wrong,4.6,Nên dùng occluded vì đoán được vị trí giải phẫu
+D03.png,face13,right_eye_upper.outside,khác cờ,0,1,both_wrong,4.6,Nên dùng occluded thay vì outside
+D03.png,face13,right_eye_lower.outside,khác cờ,0,1,both_wrong,4.6,Nên dùng occluded thay vì outside
+D03.png,face13,mouth_right.outside,khác cờ,0,1,mine,4.6,Điểm khóe miệng thấy rõ không cần cờ outside
+D04.png,face,eye_right,khác giá trị (IoU=0.91),open,unknown,peer,4.5,Peer đúng (rìa góc khuất không thấy rõ nên để unknown)
+D04.png,face,gaze_zone,khác giá trị (IoU=0.91),mirror_r,other,ambiguous,4.5,Hướng đầu quay về phía gương phải xe
+D04.png,face13,mouth_right.outside,khác cờ,0,1,mine,4.6,Khóe miệng trong khung hình không bị ra ngoài
+D05.png,person,seatbelt,khác giá trị (IoU=0.90),worn_correct,unknown,mine,4.7,Giữ nguyên (thấy rõ vệt dây vắt chéo qua vai)
+D05.png,face,gaze_zone,khác giá trị (IoU=0.87),other,cluster,mine,4.5,Tài xế cúi nhìn về phía cụm đồng hồ
+D06.png,person,seatbelt,khác giá trị (IoU=0.95),worn_correct,unknown,mine,4.7,Giữ nguyên (thấy dây an toàn vắt qua ngực)
+D06.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.2,Peer đúng (DMS không vẽ object chai nước/cốc)
+S01_rgb.png,frame_meta,light,khác giá trị,night,unknown,peer,3.1,Peer đúng (ảnh SVIRO là ảnh mô phỏng nên light là unknown)
+S01_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,mine,4.1,Giữ nguyên (có ghế trẻ em phía sau)
+S02_ir.png,person,seatbelt,khác giá trị (IoU=0.99),not_worn,unknown,mine,4.4-1,Cả not_worn và unknown đều hợp lệ trên SVIRO
+S02_ir.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS chỉ gán person và face, không gán hand)
+S02_ir.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ box hand)
+S02_ir.png,face,gaze_zone,khác giá trị (IoU=0.83),road,other,peer,4.1,Peer đúng (OMS chỉ cần vẽ box face không cần thuộc tính gaze)
+S02_ir.png,face13,count,khác số skeleton,1,0,,,peer,4.6,Peer đúng (SVIRO/OMS không vẽ face13 skeleton)
+S02_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,3.1,Peer đúng (SVIRO synthetic light nên để unknown)
+S02_rgb.png,face,eye_left,khác giá trị (IoU=0.86),open,unknown,peer,4.1,OMS không bắt buộc gán chi tiết mắt
+S02_rgb.png,face,eye_right,khác giá trị (IoU=0.86),open,unknown,peer,4.1,OMS không bắt buộc gán chi tiết mắt
+S02_rgb.png,face,gaze_zone,khác giá trị (IoU=0.86),road,other,peer,4.1,OMS chỉ cần vẽ box mặt
+S02_rgb.png,face,glasses,khác giá trị (IoU=0.86),none,unknown,peer,4.1,OMS chỉ cần box mặt
+S02_rgb.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S02_rgb.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S02_rgb.png,face13,count,khác số skeleton,1,0,,,peer,4.6,Peer đúng (chỉ vẽ face13 trên Drive&Act)
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=0.96),unknown,yes,mine,4.8,Mine đúng (child_seat guideline quy định không có giá trị yes)
+S03_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,mine,4.8,Đồ vật trong ghế trẻ em vẽ 2 box riêng biệt
+S03_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,mine,4.8,Đồ vật trong ghế trẻ em vẽ 2 box riêng biệt
+S03_rgb.png,frame_meta,light,khác giá trị,night,unknown,peer,3.1,Peer đúng (SVIRO light = unknown)
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=0.89),unknown,yes,mine,4.8,Mine đúng (child_seat chỉ nhận occupied no hoặc unknown)
+S03_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,mine,4.8,Đồ vật trong ghế trẻ em vẽ 2 box riêng
+S03_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,mine,4.8,Đồ vật trong ghế trẻ em vẽ 2 box riêng
+S04_ir.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S04_ir.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S04_ir.png,person,seatbelt,khác giá trị (IoU=0.87),not_worn,unknown,ambiguous,4.4-1,Cả hai đều chấp nhận được vì SVIRO không ai thắt dây
+S04_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,,peer,4.1,Peer đúng (có người ngồi thì vẽ thêm box face)
+S04_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,ambiguous,4.8,Kiểm tra lại vật trên ghế
+S04_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,3.1,Peer đúng (SVIRO synthetic light = unknown)
+S04_rgb.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S04_rgb.png,person,seatbelt,khác giá trị (IoU=0.87),not_worn,unknown,ambiguous,4.4-1,Cả hai đều chấp nhận được
+S04_rgb.png,hand,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,peer,4.1,Peer đúng (OMS không vẽ hand)
+S04_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,ambiguous,4.8,Kiểm tra lại vật trên ghế
+S04_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,,,peer,4.1,Peer đúng (người lớn cần có thêm box face)
+S05_ir.png,child_seat,occupied,khác giá trị (IoU=0.87),unknown,yes,mine,4.8,Mine đúng (child_seat occupied không được dùng yes)
+S05_ir.png,child_seat,seat,khác giá trị (IoU=0.87),rear_left,rear_right,mine,4.4-3,Quy tắc theo xe: trái ảnh là rear_right, phải ảnh là rear_left
+S05_ir.png,child_seat,occupied,khác giá trị (IoU=0.77),unknown,yes,mine,4.8,Mine đúng (không dùng yes)
+S05_ir.png,child_seat,seat,khác giá trị (IoU=0.77),rear_right,rear_left,mine,4.4-3,Quy tắc theo xe: trái ảnh là rear_right
+S05_rgb.png,frame_meta,light,khác giá trị,night,unknown,peer,3.1,Peer đúng (SVIRO light = unknown)
+S05_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,mine,4.8,Mine đúng (có ghế trẻ em)
+S05_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,mine,4.8,Mine đúng (có ghế trẻ em)
+S06_ir.png,infant_seat,seat,khác giá trị (IoU=0.93),rear_right,rear_left,mine,4.4-3,Mine đúng (bên trái ảnh là rear_right theo xe)
+S06_ir.png,child_seat,seat,khác giá trị (IoU=0.90),rear_left,rear_right,mine,4.4-3,Mine đúng (bên phải ảnh là rear_left theo xe)
+S06_rgb.png,frame_meta,light,khác giá trị,night,unknown,peer,3.1,Peer đúng (SVIRO light = unknown)
+S06_rgb.png,infant_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,mine,4.8,Có nôi trẻ em
+S06_rgb.png,child_seat,seat,khác giá trị (IoU=0.89),rear_left,rear_right,mine,4.4-3,Mine đúng (phải ảnh là rear_left theo xe)
+S07_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,3.1,Peer đúng (SVIRO light = unknown)
+S07_rgb.png,frame_meta,modality,khác giá trị,rgb,ir,mine,4.3-1,Mine đúng (ảnh đuôi _rgb phải là modality rgb)
+S08_ir.png,child_seat,seat,khác giá trị (IoU=0.85),rear_right,rear_left,mine,4.4-3,Mine đúng (trái ảnh là rear_right theo xe)
+S08_ir.png,infant_seat,seat,khác giá trị (IoU=0.70),rear_left,rear_right,mine,4.4-3,Mine đúng (phải ảnh là rear_left theo xe)
+S08_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,3.1,Peer đúng (SVIRO light = unknown)
+S08_rgb.png,infant_seat,seat,khác giá trị (IoU=0.71),rear_left,rear_right,mine,4.4-3,Mine đúng (phải ảnh là rear_left theo xe)
+S08_rgb.png,child_seat,seat,khác giá trị (IoU=0.91),rear_right,rear_left,mine,4.4-3,Mine đúng (trái ảnh là rear_right theo xe)

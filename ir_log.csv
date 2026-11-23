@@ -1,0 +1,5 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,Dây an toàn và áo tối màu bị bết độ sáng và mất độ tương phản màu,seatbelt,Khó thấy mép dây an toàn; phải ghi unknown thay vì đoán
+S03_ir,IR_sim,Màu sắc và họa tiết balo bị mất toàn bộ chỉ còn dạng đơn sắc xám,object_type,Chỉ nhận diện được hình khối; khó phân biệt chất liệu túi/hộp
+D02,real_IR,Đốm lóa phản xạ hồng ngoại từ đèn LED lên bề mặt tròng kính,eye_left/eye_right,Che khuất toàn bộ con ngươi và mí mắt; buộc phải ghi unknown và gắn cờ occluded
+D04,real_IR,Ánh sáng NIR suy giảm mạnh theo khoảng cách ở các góc khuất cabin,face_gaze_zone,Vùng mắt rơi vào vùng tối sâu; phải đánh giá hướng nhìn qua góc xoay đầu
